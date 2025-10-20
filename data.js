@@ -11,29 +11,46 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var animal = {};
 
+animal.species = 'snake';
+animal['name'] = 'Tony';
+animal.noises = [];
 
-
+console.log(animal);
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var noises = [];
 
+noises[0] = 'rattle';
+noises.push('buzzing');
+noises.unshift('hissing');
+noises[noises.length] = 'whistling';
+
+console.log(noises.length);
+console.log(noises[noises.length - 1]);
+console.log(noises);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+animal['noises'] = noises;
+animal.noises.push('shrieking');
+console.log(animal);
 
 
 /* *******************************************************************
  * Step 4 - Review
  *
  * 1. What are the different ways you can access properties on objects?
- *
+ *dot-notation:objectName.objectKey='objectValue';
+ *bracket-notation:objectName['objectKey']=objectValueDeclared or 'objectValue';
+ *bracket-notation:objectName[objectKey]=objectValue
  * 2. What are the different ways of accessing elements on arrays?
- *
+ *bracket-notation:arrayName[array index];
  * *******************************************************************
  */
 
@@ -49,8 +66,34 @@
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var animals = [];
+animals.push(animal);
+console.log(animals); //[{...}]
 
+var duck = {};
+duck.species = 'duck';
+duck['name'] = 'Jerome';
+duck.noises = ['quack', 'honk', 'sneeze', 'woosh'];
 
+animals.push(duck);
+console.log(animals); //2 [{...}, {...}]
+
+var rooster = {};
+rooster.species = 'rooster';
+rooster.name = 'Ronnie';
+rooster.noises = ['crow', 'peck'];
+
+animals.push(rooster);
+
+var monkey = {};
+monkey['species'] = 'monkey';
+monkey['name'] = 'Molly';
+monkey['noises'] = ['howl', 'chatter'];
+
+animals.push(monkey);
+
+console.log(animals); //4 [{...}, {...}, {...}, {...}]
+console.log(animals.length); //4 
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
