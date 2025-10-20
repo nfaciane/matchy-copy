@@ -17,7 +17,7 @@ animal.species = 'snake';
 animal['name'] = 'Tony';
 animal.noises = [];
 
-console.log(animal);
+//console.log(animal);
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
@@ -29,9 +29,9 @@ noises.push('buzzing');
 noises.unshift('hissing');
 noises[noises.length] = 'whistling';
 
-console.log(noises.length);
-console.log(noises[noises.length - 1]);
-console.log(noises);
+// console.log(noises.length);
+// console.log(noises[noises.length - 1]);
+//console.log(noises);
 
 
 //////////////////////////////////////////////////////////////////////
@@ -39,7 +39,7 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 animal['noises'] = noises;
 animal.noises.push('shrieking');
-console.log(animal);
+//console.log(animal);
 
 
 /* *******************************************************************
@@ -68,7 +68,7 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 var animals = [];
 animals.push(animal);
-console.log(animals); //[{...}]
+//console.log(animals); //[{...}]
 
 var duck = {};
 duck.species = 'duck';
@@ -76,7 +76,7 @@ duck['name'] = 'Jerome';
 duck.noises = ['quack', 'honk', 'sneeze', 'woosh'];
 
 animals.push(duck);
-console.log(animals); //2 [{...}, {...}]
+//console.log(animals); //2 [{...}, {...}]
 
 var rooster = {};
 rooster.species = 'rooster';
@@ -92,12 +92,43 @@ monkey['noises'] = ['howl', 'chatter'];
 
 animals.push(monkey);
 
-console.log(animals); //4 [{...}, {...}, {...}, {...}]
-console.log(animals.length); //4 
+//console.log(animals); //4 [{...}, {...}, {...}, {...}]
+//console.log(animals.length); //4 
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//choose data structure - array
+//explain why - arrays are easy to arrange and search; great when creating lists
+
+var friends = [];
+
+/*create function
+*inputs array - animals array
+*returns index of input array at random
+*use Math.random syntax: Math.floor(Math.random() *array end point);
+*/
+function getRandom(animals){
+
+return Math.floor(Math.random() * animals.length);
+
+}
+
+//console.log(animals[getRandom(animals)]); //rooster
+
+var randomAnimal = animals[getRandom(animals)];
+
+friends.push(randomAnimal.name);
+
+console.log(friends);
+
+randomAnimal.friends = friends
+console.log(friends);
+
+
+
+
+
 
 
 
