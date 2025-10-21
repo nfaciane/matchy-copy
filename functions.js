@@ -24,52 +24,49 @@ function search(animals, name){
         }
         return null;
     }
-  function replace(animals, name, replacement){
-    for(let i = 0; i < animals.length; i++){
-        let a = animals[i].name;
-        let b = name;
-        if(a === b){
-            animals.splice(animals[i], 1, replacement);
-        }
-        }
-        
-  }
-  function remove(animals, name){
-    for(let i = 0; i < animals.length; i++){
-        let a = animals[i].name;
-        let b = name;
-        if(a === b){
-            animals.splice(animals[i], 1);
-        }
-        }
-  }
-  function add(animals, animal){
-    for(let i = 0; i < animals.length; i++){
-      let a = animals[i].name;
-      console.log(a);
-      let b = animals[i].species;
-      if(a.length > 0 && b.length > 0 && a !== animal){
-        animals.push(animal);
-      }
-  }
-}
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function replace(animals, name, replacement){
+  for(let i = 0; i < animals.length; i++){
+      let a = animals[i].name;
+      let b = name;
+      if(a === b){
+          animals.splice(animals[i], 1, replacement);
+      }
+      }
+      
+}
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function remove(animals, name){
+  for(let i = 0; i < animals.length; i++){
+      let a = animals[i].name;
+      let b = name;
+      if(a === b){
+          animals.splice(animals[i], 1);
+      }
+      }
+}
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+function add(animals, animal){
+  for(let i = 0; i > animals.length; i++){
+    let b = animals[i].name;
+    let a = animal.name;
+    if(!(a === b) && a.length > 0 && animal.species.length > 0){
+      animals.push(animal);
+    }
+  }
+  }
 
 
 
