@@ -12,7 +12,47 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function search(animals, name){
+    for(let i = 0; i < animals.length; i++){
+        let a = animals[i].name;
+        let b = name;
+        if(a === b){
+            return animals[i];
+        } else{
+            
+        }
+        }
+        return null;
+    }
+  function replace(animals, name, replacement){
+    for(let i = 0; i < animals.length; i++){
+        let a = animals[i].name;
+        let b = name;
+        if(a === b){
+            animals.splice(animals[i], 1, replacement);
+        }
+        }
+        
+  }
+  function remove(animals, name){
+    for(let i = 0; i < animals.length; i++){
+        let a = animals[i].name;
+        let b = name;
+        if(a === b){
+            animals.splice(animals[i], 1);
+        }
+        }
+  }
+  function add(animals, animal){
+    for(let i = 0; i < animals.length; i++){
+      let a = animals[i].name;
+      console.log(a);
+      let b = animals[i].species;
+      if(a.length > 0 && b.length > 0 && a !== animal){
+        animals.push(animal);
+      }
+  }
+}
 
 
 //////////////////////////////////////////////////////////////////////
