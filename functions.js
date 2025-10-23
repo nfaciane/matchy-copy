@@ -69,6 +69,14 @@ function add(animals, animal){
         matchFound.push(animals[i]);
       }
      }
+     if(matchFound.length === 0){
+      if(animal.name.length > 0 && animal.species.length > 0){
+        animals.push(animal);
+      }
+      
+     } else {
+      return animals;
+     }
        
         
      }
