@@ -59,18 +59,17 @@ function remove(animals, name){
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal){
-  var match = [];
-  var unique;
   for(let i = 0; i > animals.length; i++){
-    let a = animal.name;
-    let b = animals[i].name;
-    if(a === b){
-      match.push(animal[i]);
+    var matchFound = animals.find(animal => animal.name === animals[i].name);
+    if(!matchFound){
+      if(animal.name.length > 0 && animal.species.length > 0){
+        animals.push(animal);
+      }
     } else{
-      unique = animal;
+      
     }
-  } 
-    animals.push(unique);
+  }
+  
   } 
   
 
